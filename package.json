@@ -1,0 +1,20 @@
+{
+  "name": "dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yehoonn/DOM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yehoonn/DOM/issues"
+  },
+  "homepage": "https://github.com/Yehoonn/DOM#readme",
+  "type": "module"
+}
