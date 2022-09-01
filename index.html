@@ -5,87 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        transition: 0.5s;
+      }
+      body {
+        background-color: salmon;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        gap: 10px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        font-family: "Do Hyeon", sans-serif;
+      }
+
+      section {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 275px;
+        height: 250px;
+        background-color: antiquewhite;
+        border-radius: 20px;
+        gap: 25px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      section:hover {
+        background-color: lightblue;
+      }
+
+      section > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      section > div:nth-child(1) {
+        font-size: 1.5rem;
+      }
+      section > div:nth-child(2) {
+        font-size: 1rem;
+      }
+      section > div:nth-child(3) {
+        font-size: 1rem;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
-
-    <script type="module">
-      const root = document.getElementById("root");
-      root.style.width = "500px";
-      root.style.height = "500px";
-      root.style.backgroundColor = "lightgray";
-      root.style.display = "flex";
-      root.style.justifyContent = "center";
-      root.style.alignItems = "center";
-      root.style.fontSize = "1.5rem";
-      root.style.fontWeight = "bold";
-      root.style.flexWrap = "wrap";
-      root.style.gap = "30px";
-      root.style.flexDirection = "column";
-      let count = 0;
-      const DOM = [];
-
-      const monsterList = [
-        "피카츄",
-        "라이츄",
-        "파이리",
-        "꼬부기",
-        "야도란",
-        "또가스",
-        "리자몽",
-      ];
-
-      const colorArray = [
-        "red",
-        "blue",
-        "gray",
-        "green",
-        "salmon",
-        "black",
-        "lightseagreen",
-      ];
-
-      function pocketMonster(count, name) {
-        this.id = count + 1;
-        this.name = name;
-        this.color = colorArray[count];
-      }
-
-      function asd() {
-        let monsterObject = [];
-        for (let key of monsterList) {
-          monsterObject.push(new pocketMonster(count, key));
-          count++;
-        }
-        return monsterObject;
-      }
-
-      let a = asd();
-
-      console.log(a);
-
-      function createHTML(
-        type,
-        attribute,
-        count,
-        array,
-        elementArray,
-        parent,
-        parentType
-      ) {
-        for (let key of array) {
-          elementArray.push(
-            `<${type} ${attribute} = 'test-${count}' onclick = alert("${key}입니다") style ="color:${colorArray[count]};">${key}</${type}>`
-          );
-          count++;
-        }
-
-        elementArray.unshift(`<${parentType}>`);
-        elementArray.push(`</${parentType}>`);
-        parent.innerHTML = `${elementArray.join("")}`;
-      }
-
-      createHTML("div", "class", count, monsterList, DOM, root, "ul");
-    </script>
+    <script type="module" src="../javascript/main.js"></script>
+    <script src="../javascript/styling.js"></script>
   </body>
 </html>
