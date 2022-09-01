@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        transition: 0.5s;
+      }
+      body {
+        background-color: salmon;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        gap: 10px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        font-family: "Do Hyeon", sans-serif;
+      }
+
+      section {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 275px;
+        height: 250px;
+        background-color: antiquewhite;
+        border-radius: 20px;
+        gap: 25px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      section:hover {
+        background-color: lightblue;
+      }
+
+      section > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      section > div:nth-child(1) {
+        font-size: 1.5rem;
+      }
+      section > div:nth-child(2) {
+        font-size: 1rem;
+      }
+      section > div:nth-child(3) {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="../javascript/main.js"></script>
+    <script src="../javascript/styling.js"></script>
+  </body>
+</html>
